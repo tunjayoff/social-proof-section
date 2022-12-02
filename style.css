@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+:root {
+	--ffamily: "League Spartan", sans-serif;
+	--fcolor-verified-buyer: hsl(333, 80%, 67%);
+	--fcolor-service-exp: hsl(303, 10%, 53%);
+	--fcolor-comment: hsl(0, 0%, 100%);
+
+	--bgcolor-card: hsl(300, 43%, 22%);
+	--bgcolor-ratings: hsl(300, 24%, 96%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+main {
+	display: grid;
+	max-width: 1110px;
+	max-height: 590px;
+	padding: 10px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 30px;
+	font-family: var(--ffamily);
+}
+
+.paragraph-container {
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.paragraph-container > h1 {
+	font-size: 42px;
+	font-weight: 700;
+	width: 80%;
+	color: #4b1e47;
+	line-height: 40px;
+	letter-spacing: -1px;
+}
+
+.paragraph-container > p {
+	color: var(--fcolor-service-exp);
+	font-size: 15px;
+}
+
+.ratings-container {
+	display: flex;
+	flex-direction: column;
+
+	font-size: 15px;
+	row-gap: 20px;
+	font-weight: 700;
+	color: #4b1e47;
+}
+
+.ratings-container ul {
+	display: flex;
+	gap: 25px;
+	justify-self: left;
+	padding-left: 20px;
+	list-style-image: url(/images/icon-star.svg);
+	position: relative;
+	left: 30px;
+}
+
+.ratebox {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	place-items: center;
+
+	height: 55px;
+	width: 440px;
+
+	font-weight: 700;
+	color: #4b1e47;
+
+	background-color: var(--bgcolor-ratings);
+	border-radius: 0.5rem;
+}
+
+.ratebox > p {
+	justify-self: flex-start;
+	padding-left: 30px;
+}
+
+.box2 {
+	align-self: center;
+}
+
+.box3 {
+	align-self: flex-end;
+}
+
+.comments-container {
+	display: grid;
+	justify-self: left;
+	min-width: 1111px;
+	min-height: 277px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column: 1 / span 2;
+	column-gap: 30px;
+}
+
+.comment-box {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	border-radius: 0.5rem;
+	align-items: center;
+	row-gap: 20px;
+	font-size: 16px;
+	word-spacing: 2px;
+	color: var(--fcolor-comment);
+
+	width: 350px;
+	height: 235px;
+	background-color: var(--bgcolor-card);
+	padding: 38px 30px;
+}
+
+.comment-box > img {
+	border-radius: 50%;
+	width: 50px;
+}
+
+.comment-box > h2 {
+	line-height: 20px;
+}
+.comment-box span {
+	color: var(--fcolor-verified-buyer);
+	margin-top: -5px;
+	font-weight: 400;
+	font-size: 17px;
+}
+.comment-box > p {
+	grid-column: 1 / span 2;
+}
+
+.cbox2 {
+	align-self: center;
+}
+
+.cbox3 {
+	align-self: flex-end;
+}
+
+.attribution {
+	position: absolute;
+	bottom: 20px;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
